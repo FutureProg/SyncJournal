@@ -1,0 +1,106 @@
+#app {   
+  font-family: BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif!important;
+  padding: 20px 0;
+  padding-right: 20px;
+  background: white;  
+  height: calc(100vh - 40px);
+}
+
+#content{    
+  position: relative;
+  height: 100%;
+}
+
+#side-bar{
+  position: relative;
+  float: left;  
+  width: 230px;
+  height: 100%;
+  transition: 0.5s;
+}
+#side-bar.hidden{
+  width: 50px;
+}
+
+#editor{  
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+  display: inline-block;
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.50);
+  width: calc(100% - 270px);
+  height: calc(100% - 20px);
+  padding: 10px;  
+  color: rgba(0,0,0,0.8);
+  transition: 0.5s;
+}
+#editor.expand{
+  width: calc(100% - 90px);
+}
+#editor [contentEditable=true]{    
+  border: none;
+  overflow: auto;
+  outline: none;
+  cursor: text;
+}
+#editor [contentEditable=true]:empty:before{
+  opacity: 0.5;
+  content: attr(placeholder);
+  display: block;  
+}
+#editor #title{
+  font-size: 38px;
+  font-weight: 600;
+}
+#editor #post-body{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 3px;
+  min-height: calc(100% - 50px);
+}
+
+
+#menu-bar{
+  position: relative;  
+  padding: 5px 10px;
+  border-bottom: 1px solid #979797;
+  transition: 0.5s;
+}
+#menu-bar img{
+  margin: 5px 5px; 
+  cursor: pointer; 
+}
+
+#entry-list{  
+  background: white;
+  transition: 0.5s;
+}
+#entry-list.closed{
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+#entry-list .item{
+  border-bottom: 1px solid #979797;
+  padding: 10px;
+  transition: 0.5s;
+}
+#entry-list .item .title{
+  font-size: 18px;
+}
+#entry-list .item .create-date{
+  font-size: 12px;
+}
+#entry-list .item .sync-bar{
+  width: 100%;
+  margin-top: 5px;
+  height: 5px;
+  border: 1px solid #979797;
+  border-radius: 5px;
+}
+#entry-list .item .sync-bar .fill{
+  background: #39B1FF;
+  border-radius: 5px;
+  height: 5px;
+}
